@@ -3,7 +3,7 @@ name: Build and Test
 on:
   workflow_dispatch:
   push:
-    branches: [ dev ]
+    branches: [ dev, main ]
     paths-ignore:
       - "**.md"
       - "**.ps1"
@@ -24,6 +24,8 @@ jobs:
   build:
     name: Build and Test
     runs-on: ubuntu-latest
+    env:
+      PKHeXSourcePath: ${{ github.workspace }}/.dependencies/PKHeX/PKHeX.Core/PKHeX.Core.csproj
 
     if: github.event_name != 'push' || github.event.pull_request == null  # Prevents duplicate runs
 
@@ -31,6 +33,13 @@ jobs:
       # uses GitHub's checkout action to checkout code form the release branch
       - name: Checkout code
         uses: actions/checkout@v7.0.1
+
+      - name: Checkout HG-engine PKHeX fork
+        uses: actions/checkout@v7.0.1
+        with:
+          repository: the-new-kai-lu/PKHeX
+          ref: 94033cce0caf90dcc04bbacdbe991233bb3bef9f
+          path: .dependencies/PKHeX
 
       # sets up .NET SDK
       - name: Setup .NET

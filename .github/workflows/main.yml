@@ -15,6 +15,7 @@ on:
 
 jobs:
   deploy:
+    if: github.repository == 'codemonkey85/PKMDS-Blazor'
     name: Deploy to GitHub Pages
     # use ubuntu-latest image to run steps on
     runs-on: ubuntu-latest
@@ -102,6 +103,7 @@ jobs:
         uses: actions/deploy-pages@v5.0.1
 
   deploy_functions:
+    if: github.repository == 'codemonkey85/PKMDS-Blazor'
     name: Deploy Azure Functions
     runs-on: ubuntu-latest
     # Least-privilege: deploys via the AZURE_CREDENTIALS secret, not GITHUB_TOKEN.

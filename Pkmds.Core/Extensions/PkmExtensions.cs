@@ -12,7 +12,7 @@ public static class PkmExtensions
     /// <param name="speciesId">The species ID to validate.</param>
     /// <returns>True if the species ID is valid; otherwise, false.</returns>
     public static bool IsValidSpecies(this ushort speciesId) =>
-        speciesId is > (ushort)Species.None and < (ushort)Species.MAX_COUNT;
+        speciesId is > (ushort)Species.None and < (ushort)Species.MAX_COUNT || HGEngineSpecies.IsCustom(speciesId);
 
     /// <summary>
     /// Determines whether a nullable species ID is valid.

@@ -21,6 +21,7 @@ on:
 
 jobs:
   build_and_deploy:
+    if: github.repository == 'codemonkey85/PKMDS-Blazor'
     name: Build and Deploy UAT
     runs-on: ubuntu-latest
     # contents: read for checkout; pull-requests: write so the Static Web Apps

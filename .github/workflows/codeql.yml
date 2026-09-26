@@ -12,6 +12,8 @@ on:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
+    env:
+      PKHeXSourcePath: ${{ github.workspace }}/.dependencies/PKHeX/PKHeX.Core/PKHeX.Core.csproj
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
     permissions:
       # required for all workflows
@@ -39,6 +41,14 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v7.0.1
+
+    - name: Checkout HG-engine PKHeX fork
+      if: matrix.language == 'csharp'
+      uses: actions/checkout@v7.0.1
+      with:
+        repository: the-new-kai-lu/PKHeX
+        ref: 94033cce0caf90dcc04bbacdbe991233bb3bef9f
+        path: .dependencies/PKHeX
 
       # .NET SDK + WASM workload are only needed for the csharp manual build;
       # the buildless analyses (js, actions, python) skip them.

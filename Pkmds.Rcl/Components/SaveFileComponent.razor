@@ -31,6 +31,13 @@ else
         @SaveFileNameDisplay.SaveFileNameDisplayString(AppState, AppService)
     </MudText>
 
+    @if (saveFile is SAV4HGSS { IsHGEngine: true })
+    {
+        <MudAlert Severity="Severity.Info" Class="my-3">
+            HG-engine save: custom species are supported. Retail legality checks do not describe this ROM's encounters.
+        </MudAlert>
+    }
+
     @if (saveFile is SAV4BR battleRevolution)
     {
         <div class="flex flex-wrap items-center gap-3 my-3">

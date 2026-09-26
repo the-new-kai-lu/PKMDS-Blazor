@@ -1637,6 +1637,8 @@ public class AppService(IAppState appState, IRefreshService refreshService, ILeg
 
     public IReadOnlyList<EvolutionMethod> GetDirectEvolutions(PKM pkm)
     {
+        // In-game custom evolution conditions are not represented by retail tables.
+        if (HGEngineSpecies.IsCustom(pkm.Species)) return [];
         var tree = EvolutionTree.GetEvolutionTree(pkm.Context);
         var methods = tree.Forward.GetForward(pkm.Species, pkm.Form);
         var canHaveContest = pkm.CanHaveContestStats();
