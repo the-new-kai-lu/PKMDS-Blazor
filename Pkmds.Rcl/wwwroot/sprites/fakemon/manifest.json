@@ -1,0 +1,204 @@
+{
+  "source": "pokeheartgold/files/fakemon",
+  "method": "First 80x80 approved front frame, using native normal/shiny RGB555 battle palettes; transparent index zero",
+  "images": [
+    {
+      "species": 1076,
+      "name": "Voltuff",
+      "shiny": false,
+      "file": "voltuff.png",
+      "sha256": "77d62b386ac631a9cb3de8438ca2fb090c592edae665757063130f029cef2612",
+      "source_frame_sha256": "204516e11d75ddc542bc1283b309dd7c1b1db5c64f58093b95c385ea38fb206b",
+      "source_palette_sha256": "8a684479731ac83247b4d54eb53dd604e633dc9a41d724b18700897f0f9534a0"
+    },
+    {
+      "species": 1076,
+      "name": "Voltuff",
+      "shiny": true,
+      "file": "shiny/voltuff.png",
+      "sha256": "46771d8319bc5abe0c963a42a87da6deee97e2726977e6c610812a68e3a04552",
+      "source_frame_sha256": "204516e11d75ddc542bc1283b309dd7c1b1db5c64f58093b95c385ea38fb206b",
+      "source_palette_sha256": "1c22ebdd6f903b18fa65636dacacfaee5a2ed38c171a202a1665fb4c5ee5aa02"
+    },
+    {
+      "species": 1077,
+      "name": "Surguenon",
+      "shiny": false,
+      "file": "surguenon.png",
+      "sha256": "b5f4a9bb85b5276bcd204349970c0f47532e7004de2e55fab129155a700b8953",
+      "source_frame_sha256": "cb68e0787331e1785d33c425db9c5bb2a2339be556ca8bde96f54b183ef257e8",
+      "source_palette_sha256": "8a684479731ac83247b4d54eb53dd604e633dc9a41d724b18700897f0f9534a0"
+    },
+    {
+      "species": 1077,
+      "name": "Surguenon",
+      "shiny": true,
+      "file": "shiny/surguenon.png",
+      "sha256": "a6bd28ddcf8798577dac1d9fd494e8e523e05f54168cee37979e6e1a4250a884",
+      "source_frame_sha256": "cb68e0787331e1785d33c425db9c5bb2a2339be556ca8bde96f54b183ef257e8",
+      "source_palette_sha256": "1c22ebdd6f903b18fa65636dacacfaee5a2ed38c171a202a1665fb4c5ee5aa02"
+    },
+    {
+      "species": 1078,
+      "name": "Raijinque",
+      "shiny": false,
+      "file": "raijinque.png",
+      "sha256": "0555995fe86e99d7c710875856345d6e3fa59696531f6887609244a72c6a3db7",
+      "source_frame_sha256": "9e032da20a2cf505392dc24d36b7bf239dbe1ce48338a28d744808e6681d3774",
+      "source_palette_sha256": "8a684479731ac83247b4d54eb53dd604e633dc9a41d724b18700897f0f9534a0"
+    },
+    {
+      "species": 1078,
+      "name": "Raijinque",
+      "shiny": true,
+      "file": "shiny/raijinque.png",
+      "sha256": "7603be8efd0dde203ac6946c16e2a2498baaa7b6ba9f2de490b73d0be46852a1",
+      "source_frame_sha256": "9e032da20a2cf505392dc24d36b7bf239dbe1ce48338a28d744808e6681d3774",
+      "source_palette_sha256": "1c22ebdd6f903b18fa65636dacacfaee5a2ed38c171a202a1665fb4c5ee5aa02"
+    },
+    {
+      "species": 1079,
+      "name": "Embernewt",
+      "shiny": false,
+      "file": "embernewt.png",
+      "sha256": "f7dc72f933f87efecaa79d8e93d1434c059b0476d71c95b5d93059cd38425f2b",
+      "source_frame_sha256": "14493015eff08069285dbbe9e1f3bc256add76c07455595c566e4b1f8e94ec10",
+      "source_palette_sha256": "e25c95f63b623a337b9b73f74bc84e521a1924e749ce816e5b8f29476bd415af"
+    },
+    {
+      "species": 1079,
+      "name": "Embernewt",
+      "shiny": true,
+      "file": "shiny/embernewt.png",
+      "sha256": "f3d1bb639563ea53a79057fe0498a5603061d5c1e6b7e8e1d41071e14b5a9d76",
+      "source_frame_sha256": "14493015eff08069285dbbe9e1f3bc256add76c07455595c566e4b1f8e94ec10",
+      "source_palette_sha256": "1fa688e7c07746a3fcadf17cc0e96c11b072ae006a0bf5bc2a2ab3c8eef2ea18"
+    },
+    {
+      "species": 1080,
+      "name": "Pyrovaran",
+      "shiny": false,
+      "file": "pyrovaran.png",
+      "sha256": "7df588a9bdc4658dc4c0a6b6e233d0fb2c0b538fa5f238a369139a94d514302f",
+      "source_frame_sha256": "92e049567ce5299bc001b618c29f4af0e529125d9f41b1d2853142395227e6f4",
+      "source_palette_sha256": "e25c95f63b623a337b9b73f74bc84e521a1924e749ce816e5b8f29476bd415af"
+    },
+    {
+      "species": 1080,
+      "name": "Pyrovaran",
+      "shiny": true,
+      "file": "shiny/pyrovaran.png",
+      "sha256": "c7b8a069e88d0b635eb97061b4454b26dc7b36bbfede94f5961e9e88f4c38ac1",
+      "source_frame_sha256": "92e049567ce5299bc001b618c29f4af0e529125d9f41b1d2853142395227e6f4",
+      "source_palette_sha256": "1fa688e7c07746a3fcadf17cc0e96c11b072ae006a0bf5bc2a2ab3c8eef2ea18"
+    },
+    {
+      "species": 1081,
+      "name": "Magmalisk",
+      "shiny": false,
+      "file": "magmalisk.png",
+      "sha256": "0aeb63f8b2077bdc7f8f5c8774278cd0b5031fcff33dff3753b292b576c357f8",
+      "source_frame_sha256": "fe78a061d20a226116747a1e247ad8a938ee4ee08cc5bd28f2d29cf75bd2a221",
+      "source_palette_sha256": "e25c95f63b623a337b9b73f74bc84e521a1924e749ce816e5b8f29476bd415af"
+    },
+    {
+      "species": 1081,
+      "name": "Magmalisk",
+      "shiny": true,
+      "file": "shiny/magmalisk.png",
+      "sha256": "1157ae316df6dcf763930f81c4bac91c8fab38befc2b5b001bf5879934225c22",
+      "source_frame_sha256": "fe78a061d20a226116747a1e247ad8a938ee4ee08cc5bd28f2d29cf75bd2a221",
+      "source_palette_sha256": "1fa688e7c07746a3fcadf17cc0e96c11b072ae006a0bf5bc2a2ab3c8eef2ea18"
+    },
+    {
+      "species": 1082,
+      "name": "Rimevaran",
+      "shiny": false,
+      "file": "rimevaran.png",
+      "sha256": "06ef48c78489923e599c018f04281a25ba366a44ebfddc3abbb3f3caa7af0432",
+      "source_frame_sha256": "e95a1ef83e058d639ff24c406fe4e6a1039d069139365f2dcb8ba8d50334977c",
+      "source_palette_sha256": "350fcebfd2308006009f2f5b7313a77f6adbe20fb7c0d83c754bb74de5669cea"
+    },
+    {
+      "species": 1082,
+      "name": "Rimevaran",
+      "shiny": true,
+      "file": "shiny/rimevaran.png",
+      "sha256": "1158ffb0294bafbe5cac10c97773c0c8a3e76efbbb8146739da23c78c1350b54",
+      "source_frame_sha256": "e95a1ef83e058d639ff24c406fe4e6a1039d069139365f2dcb8ba8d50334977c",
+      "source_palette_sha256": "47538c79ac0cef1741fc9628aef3d8f978fcf7185e753704ad6a9961c0007472"
+    },
+    {
+      "species": 1083,
+      "name": "Fimbulisk",
+      "shiny": false,
+      "file": "fimbulisk.png",
+      "sha256": "ac1213a82dc2b117ee68a8ddc273b3ce5ac51bd1d396a1fdb021cd56c66ebc8a",
+      "source_frame_sha256": "d071adeab0d2a8131a8123a9da496c921681c0cc62fc9e08a1cbffaa7e2759b9",
+      "source_palette_sha256": "350fcebfd2308006009f2f5b7313a77f6adbe20fb7c0d83c754bb74de5669cea"
+    },
+    {
+      "species": 1083,
+      "name": "Fimbulisk",
+      "shiny": true,
+      "file": "shiny/fimbulisk.png",
+      "sha256": "7a8d959f21b19a3c0a941b4e3c8e29d16663d5509ba2e9bf64a7fe07e8e137b4",
+      "source_frame_sha256": "d071adeab0d2a8131a8123a9da496c921681c0cc62fc9e08a1cbffaa7e2759b9",
+      "source_palette_sha256": "47538c79ac0cef1741fc9628aef3d8f978fcf7185e753704ad6a9961c0007472"
+    },
+    {
+      "species": 1084,
+      "name": "Sedgling",
+      "shiny": false,
+      "file": "sedgling.png",
+      "sha256": "205ad136aace100ebde3c4b384276295efebbc573770fc5234859a194aea8d43",
+      "source_frame_sha256": "3941bba41cf826a64564cbb0178e410e43bc5a6f93e50de09eefa2b2dca5280a",
+      "source_palette_sha256": "e005840b27fd6cbb8c4cbf438e2a47b5ca79d82c98b149db8e33a13c72f61922"
+    },
+    {
+      "species": 1084,
+      "name": "Sedgling",
+      "shiny": true,
+      "file": "shiny/sedgling.png",
+      "sha256": "f777f30ec0853bf30eb2922a0dad8849ca334857368fe0d85f59b83a2a162acf",
+      "source_frame_sha256": "3941bba41cf826a64564cbb0178e410e43bc5a6f93e50de09eefa2b2dca5280a",
+      "source_palette_sha256": "f2cca9ae033a370b1fd2675f5935a2ba44ff375cfd69b1f2489e6fed32b76015"
+    },
+    {
+      "species": 1085,
+      "name": "Cragaviar",
+      "shiny": false,
+      "file": "cragaviar.png",
+      "sha256": "28ad0d7614e59d4e21ab3dfe9918134bc35367e74b7886b735aab7297957ed9a",
+      "source_frame_sha256": "f46d6ff5952cd5e32006748dc19d0368ecd4eda40d48f4bfa1f9488670f2162f",
+      "source_palette_sha256": "e005840b27fd6cbb8c4cbf438e2a47b5ca79d82c98b149db8e33a13c72f61922"
+    },
+    {
+      "species": 1085,
+      "name": "Cragaviar",
+      "shiny": true,
+      "file": "shiny/cragaviar.png",
+      "sha256": "2609ec1e475e9b9629ca92911eb31e85e450074181d82e9c7f62834b691e78e1",
+      "source_frame_sha256": "f46d6ff5952cd5e32006748dc19d0368ecd4eda40d48f4bfa1f9488670f2162f",
+      "source_palette_sha256": "f2cca9ae033a370b1fd2675f5935a2ba44ff375cfd69b1f2489e6fed32b76015"
+    },
+    {
+      "species": 1086,
+      "name": "Ragnaroc",
+      "shiny": false,
+      "file": "ragnaroc.png",
+      "sha256": "667f7966d826bd0aeb3faf7b541f2942d65c702d11746fd03cdfdf3994badb31",
+      "source_frame_sha256": "299688c929920a657ebbe2d6fa9cf1ab755e09992f2578204e199c73919d00d0",
+      "source_palette_sha256": "e005840b27fd6cbb8c4cbf438e2a47b5ca79d82c98b149db8e33a13c72f61922"
+    },
+    {
+      "species": 1086,
+      "name": "Ragnaroc",
+      "shiny": true,
+      "file": "shiny/ragnaroc.png",
+      "sha256": "dfc1434af1b9c88e52d77e16bbcb0bf303530e4eb9c337a7bf0f7bd4816f210a",
+      "source_frame_sha256": "299688c929920a657ebbe2d6fa9cf1ab755e09992f2578204e199c73919d00d0",
+      "source_palette_sha256": "f2cca9ae033a370b1fd2675f5935a2ba44ff375cfd69b1f2489e6fed32b76015"
+    }
+  ]
+}

@@ -641,6 +641,13 @@ public static class PokeApiSpriteUrls
     public static string? GetPokeApiVersionSpriteUrl(ushort species, byte form = 0, uint? formArg = null,
         bool isShiny = false, byte gender = 0, GameVersion version = GameVersion.Any)
     {
+        // Resolve bundled overrides before constructing a URL for a public species.
+        // Both HOME and game-style slots use these, so custom species never request a missing CDN image.
+        if (LocalPokemonSprites.GetUrl(species, isShiny) is { } localUrl)
+        {
+            return localUrl;
+        }
+
         if (!species.IsValidSpecies())
         {
             return null;
@@ -741,6 +748,13 @@ public static class PokeApiSpriteUrls
     public static string? GetPokeApiHomeSpriteUrl(ushort species, byte form = 0, uint? formArg = null,
         bool isShiny = false, byte gender = 0)
     {
+        // Resolve bundled overrides before constructing a URL for a public species.
+        // Both HOME and game-style slots use these, so custom species never request a missing CDN image.
+        if (LocalPokemonSprites.GetUrl(species, isShiny) is { } localUrl)
+        {
+            return localUrl;
+        }
+
         if (!species.IsValidSpecies())
         {
             return null;

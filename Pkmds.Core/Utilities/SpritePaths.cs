@@ -34,7 +34,8 @@ public static class SpritePaths
     /// <summary>Relative sprite for a Pokémon (handles forms, genders, and special cases).</summary>
     public static string GetPokemonSprite(PKM? pokemon) => pokemon is null
         ? PokemonFallbackFile
-        : GetPokemonSprite(pokemon.Species, pokemon.Context, pokemon.IsEgg, pokemon.Form,
+        : LocalPokemonSprites.GetRelativePath(pokemon.Species, pokemon.GetIsShinySafe())
+          ?? GetPokemonSprite(pokemon.Species, pokemon.Context, pokemon.IsEgg, pokemon.Form,
             pokemon.GetFormArgument(0), pokemon.Gender);
 
     /// <summary>
@@ -46,7 +47,8 @@ public static class SpritePaths
 
     private static string GetPokemonSprite(ushort species, EntityContext context, bool isEgg, byte form,
         uint? formArg1, byte gender) =>
-        new StringBuilder("a/a_")
+        LocalPokemonSprites.GetRelativePath(species)
+        ?? new StringBuilder("a/a_")
             .Append((species, context, isEgg, form, formArg1, gender) switch
             {
                 // Let's Go starter forms with partner ribbon

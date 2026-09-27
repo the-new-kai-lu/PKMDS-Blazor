@@ -21,6 +21,9 @@ namespace Pkmds.Core.Utilities;
 /// </remarks>
 public static class SpriteSource
 {
+    /// <summary>Bundled sprite root, relative to the app base path rather than the server root.</summary>
+    public const string BundledBaseUrl = "_content/Pkmds.Rcl/sprites/";
+
     // ── Transport: the ONE place to change CDN / fork / branch ───────────────
     // Serving codemonkey85/sprites (our fork) via jsDelivr's GitHub gateway.
     // Direct-from-GitHub alternative (no CDN):

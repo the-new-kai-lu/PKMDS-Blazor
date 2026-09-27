@@ -15,7 +15,7 @@ namespace Pkmds.Rcl;
 /// </remarks>
 public static partial class ImageHelper
 {
-    private const string SpritesRoot = "_content/Pkmds.Rcl/sprites/";
+    private const string SpritesRoot = SpriteSource.BundledBaseUrl;
 
     /// <summary>Fallback image path for unknown items.</summary>
     public const string ItemFallbackImageFileName = $"{SpritesRoot}{SpritePaths.ItemFallbackFile}";
