@@ -24,7 +24,7 @@ The PKHeX core recognizes the marker `FK` in Pokédex language padding (general 
 
 ## Validation and manual end-to-end checks
 
-Local verification uses `dotnet format` and Debug Web/test-project builds. Repository policy reserves test execution for GitHub Actions. Automated cases cover the added moves' names, types, categories and PP, sparse species selection, retail personal data, and protection against retail move suggestions. Formatting, the Web Debug build and the test-project Debug build passed. Interactive emulator/browser integration remains pending at this commit.
+Local verification uses `dotnet format` and Debug Web/test-project builds. Repository policy reserves test execution for GitHub Actions. Automated cases cover the added moves' names, types, categories and PP, sparse species selection, retail personal data, and protection against retail move suggestions. Formatting, the Web Debug build and the test-project Debug build passed. CI run [36285068803](https://github.com/the-new-kai-lu/PKMDS-Blazor/actions/runs/36285068803) passed all 475 tests. A subsequent headless HeartGold/editor save round trip verified the actual in-game save (both block counters advanced 2847→2848), valid CRCs, party Voltuff and all eleven custom box entries with compact moves. That test exposed and fixed an inherited PKHeX loader mutation at offset 0x1C; this branch pins the corrected core. Interactive browser acceptance and the wider in-game behavior checklist below remain pending.
 
 For emulator and browser acceptance testing:
 
