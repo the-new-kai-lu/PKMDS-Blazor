@@ -1,4 +1,4 @@
-﻿@inherits BasePkmdsComponent
+@inherits BasePkmdsComponent
 @inject ILegalityFixService LegalityFixService
 
 @if (Pokemon is not null &&
@@ -40,8 +40,8 @@
                             @if (moveId != 0)
                             {
                                 @MoveTypeAndCategorySummary(
-                                    MoveInfo.GetType(moveId, saveFileEntityContext),
-                                    GetMoveCategory(moveId, saveFileEntityContext))
+                                    MoveInfo.GetType(moveId, AppState.SaveFile!),
+                                    GetMoveCategory(moveId, AppState.SaveFile!))
                             }
                             else
                             {
@@ -76,8 +76,8 @@
                                 <InfoButton Title="@(moveInfos[i]?.Name ?? SafeNameLookup.Move(moveId))">
                                     <MudStack Spacing="2">
                                         @MoveTypeAndCategorySummary(
-                                            MoveInfo.GetType(moveId, saveFileEntityContext),
-                                            GetMoveCategory(moveId, saveFileEntityContext))
+                                            MoveInfo.GetType(moveId, AppState.SaveFile!),
+                                            GetMoveCategory(moveId, AppState.SaveFile!))
                                         @if (moveInfos[i] is { } moveInfo)
                                         {
                                             <MudStack Row
@@ -401,8 +401,8 @@
                             @if (relearnMoveId != 0)
                             {
                                 @MoveTypeAndCategorySummary(
-                                    MoveInfo.GetType(relearnMoveId, saveFileEntityContext),
-                                    GetMoveCategory(relearnMoveId, saveFileEntityContext))
+                                    MoveInfo.GetType(relearnMoveId, AppState.SaveFile!),
+                                    GetMoveCategory(relearnMoveId, AppState.SaveFile!))
                             }
                             else
                             {
@@ -444,8 +444,8 @@
                                     <InfoButton Title="@(relearnMoveInfos[i]?.Name ?? SafeNameLookup.Move(relearnMoveId))">
                                         <MudStack Spacing="2">
                                             @MoveTypeAndCategorySummary(
-                                                MoveInfo.GetType(relearnMoveId, saveFileEntityContext),
-                                                GetMoveCategory(relearnMoveId, saveFileEntityContext))
+                                                MoveInfo.GetType(relearnMoveId, AppState.SaveFile!),
+                                                GetMoveCategory(relearnMoveId, AppState.SaveFile!))
                                             @if (relearnMoveInfos[i] is { } relearnInfo)
                                             {
                                                 <MudStack Row
@@ -516,8 +516,8 @@
                             @if (alphaMoveId != 0)
                             {
                                 @MoveTypeAndCategorySummary(
-                                    MoveInfo.GetType(alphaMoveId, saveFileEntityContext),
-                                    GetMoveCategory(alphaMoveId, saveFileEntityContext))
+                                    MoveInfo.GetType(alphaMoveId, AppState.SaveFile!),
+                                    GetMoveCategory(alphaMoveId, AppState.SaveFile!))
                             }
                             else
                             {
@@ -549,8 +549,8 @@
                                     <InfoButton Title="@(alphaMoveInfo?.Name ?? SafeNameLookup.Move(alphaMoveId))">
                                         <MudStack Spacing="2">
                                             @MoveTypeAndCategorySummary(
-                                                MoveInfo.GetType(alphaMoveId, saveFileEntityContext),
-                                                GetMoveCategory(alphaMoveId, saveFileEntityContext))
+                                                MoveInfo.GetType(alphaMoveId, AppState.SaveFile!),
+                                                GetMoveCategory(alphaMoveId, AppState.SaveFile!))
                                             @if (alphaMoveInfo is { } alphaInfo)
                                             {
                                                 <MudStack Row
@@ -661,8 +661,8 @@
                    @if (move.Value != 0)
                    {
                        @MoveTypeAndCategorySummary(
-                           MoveInfo.GetType((ushort)move.Value, saveFileEntityContext),
-                           GetMoveCategory((ushort)move.Value, saveFileEntityContext))
+                           MoveInfo.GetType((ushort)move.Value, AppState.SaveFile!),
+                           GetMoveCategory((ushort)move.Value, AppState.SaveFile!))
                    }
                    <MudText>
                        @move.Text

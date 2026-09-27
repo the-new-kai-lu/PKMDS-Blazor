@@ -1,4 +1,4 @@
-﻿namespace Pkmds.Core.Utilities;
+namespace Pkmds.Core.Utilities;
 
 /// <summary>
 /// Utility methods for working with PKHeX GameInfo data.
@@ -32,6 +32,9 @@ public static class GameInfoUtilities
     /// in Gen 6 (XY/ORAS) and became Special from Gen 7 (SM) onward.
     /// </para>
     /// </remarks>
+    public static MoveCategory GetMoveCategory(ushort moveId, SaveFile save) =>
+        GetMoveCategory(save is SAV4HGSS { IsFakemonStock: true } ? FakemonStockProfile.GetCanonicalMove(moveId) : moveId, save.Context);
+
     public static MoveCategory GetMoveCategory(ushort moveId, EntityContext context) =>
         context switch
         {

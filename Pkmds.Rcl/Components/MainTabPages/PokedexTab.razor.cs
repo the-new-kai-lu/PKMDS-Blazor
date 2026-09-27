@@ -1,4 +1,4 @@
-﻿namespace Pkmds.Rcl.Components.MainTabPages;
+namespace Pkmds.Rcl.Components.MainTabPages;
 
 public partial class PokedexTab
 {
@@ -82,6 +82,8 @@ public partial class PokedexTab
     {
         switch (saveFile)
         {
+            case SAV4HGSS { HasCustomSpecies: true }:
+                return 493 + HGEngineSpecies.Names.Length;
             // SAV_PokedexGG: hardcoded list of 1–151 + Meltan (808) + Melmetal (809).
             // No HOME support — cross-gen species cannot exist in LGPE.
             case SAV7b:

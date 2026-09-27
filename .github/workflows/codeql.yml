@@ -42,12 +42,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v7.0.1
 
-    - name: Checkout HG-engine PKHeX fork
+    - name: Checkout matching Fakemon PKHeX fork
       if: matrix.language == 'csharp'
       uses: actions/checkout@v7.0.1
       with:
         repository: the-new-kai-lu/PKHeX
-        ref: 94033cce0caf90dcc04bbacdbe991233bb3bef9f
+        ref: aa1b8f1219530e21e3dace997abac9a2e83b3674
         path: .dependencies/PKHeX
 
       # .NET SDK + WASM workload are only needed for the csharp manual build;

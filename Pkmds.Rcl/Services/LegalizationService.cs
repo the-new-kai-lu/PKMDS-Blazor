@@ -21,10 +21,10 @@ public sealed class LegalizationService(IAppState appState) : ILegalizationServi
         CancellationToken ct = default,
         int? timeoutSeconds = null)
     {
-        if (sav is SAV4HGSS { IsHGEngine: true })
+        if (sav is SAV4HGSS { HasCustomSpecies: true })
         {
             return new LegalizationOutcome(pk.Clone(), LegalizationStatus.Failed,
-                "HG-engine uses custom species and encounters. Retail legality generation is unavailable; edit this Pokémon directly.");
+                "This ROM uses custom species and encounters. Retail legality generation is unavailable; edit this Pokémon directly.");
         }
 
         // Snapshot the original now so the success diff sees pre-mutation state.

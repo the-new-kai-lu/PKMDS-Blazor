@@ -1,4 +1,4 @@
-﻿@inherits RefreshAwareComponent
+@inherits RefreshAwareComponent
 
 @if (AppState is not { SaveFile: { } saveFile })
 {
@@ -30,6 +30,13 @@ else
     <MudText Typo="@Typo.h5">
         @SaveFileNameDisplay.SaveFileNameDisplayString(AppState, AppService)
     </MudText>
+
+    @if (saveFile is SAV4HGSS { IsFakemonStock: true })
+    {
+        <MudAlert Severity="Severity.Info" Class="my-3">
+            pokeheartgold Fakemon save: all eleven species and seven added moves are supported. Retail legality checks do not describe this ROM's encounters.
+        </MudAlert>
+    }
 
     @if (saveFile is SAV4HGSS { IsHGEngine: true })
     {

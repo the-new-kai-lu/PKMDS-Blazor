@@ -4,6 +4,10 @@ public sealed class LegalityFixService(IAppService appService) : ILegalityFixSer
 {
     public FixOutcome SuggestMoves(PKM pokemon)
     {
+        if (pokemon is PK4 { IsFakemonStock: true } || HGEngineSpecies.IsCustom(pokemon.Species))
+        {
+            return new FixOutcome(Changed: false, Severity.Warning, "Retail move suggestions do not apply to this custom ROM. Choose moves directly.");
+        }
         pokemon.SetMoveset();
 
         // Update Technical Records (Gen 8+ SwSh / SV / ZA) to reflect the new moves,

@@ -45,7 +45,7 @@ public partial class MovesTab
         {
             var moveId = Pokemon.Moves[i];
             moveInfos[i] = moveId != 0
-                ? await DescriptionService.GetMoveInfoAsync(moveId, version)
+                ? await DescriptionService.GetMoveInfoAsync(GetDescriptionMove(moveId), version)
                 : null;
         }
 
@@ -55,7 +55,7 @@ public partial class MovesTab
             {
                 var moveId = Pokemon.GetRelearnMove(i);
                 relearnMoveInfos[i] = moveId != 0
-                    ? await DescriptionService.GetMoveInfoAsync(moveId, version)
+                    ? await DescriptionService.GetMoveInfoAsync(GetDescriptionMove(moveId), version)
                     : null;
             }
         }
@@ -68,6 +68,9 @@ public partial class MovesTab
                 : null;
         }
     }
+
+    private ushort GetDescriptionMove(ushort move) => AppState.SaveFile is SAV4HGSS { IsFakemonStock: true }
+        ? FakemonStockProfile.GetCanonicalMove(move) : move;
 
     private string FormatMoveMessage(MoveResult result, int index)
     {
@@ -104,7 +107,7 @@ public partial class MovesTab
             return;
         }
 
-        moveInfos[moveIndex] = await DescriptionService.GetMoveInfoAsync(moveId, sav.Version);
+        moveInfos[moveIndex] = await DescriptionService.GetMoveInfoAsync(GetDescriptionMove((ushort)moveId), sav.Version);
         StateHasChanged();
     }
 

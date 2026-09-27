@@ -1,4 +1,4 @@
-﻿namespace Pkmds.Core.Extensions;
+namespace Pkmds.Core.Extensions;
 
 /// <summary>
 /// Extension methods for PKM (Pokémon) objects and related types.
@@ -189,7 +189,7 @@ public static class PkmExtensions
         {
             var move = pkm.GetMove(moveIndex);
             // ReSharper disable once InconsistentNaming
-            var moveBasePP = MoveInfo.GetPP(pkm.Context, move);
+            var moveBasePP = pkm.GetBasePP(move);
             var ppUps = pkm.GetPPUps()[moveIndex];
 
             return moveBasePP + moveBasePP * ppUps / 5;

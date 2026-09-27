@@ -161,6 +161,7 @@ internal static class PokedexHelpers
     /// </summary>
     internal static bool IsSpeciesInDex(SaveFile saveFile, ushort species) => saveFile switch
     {
+        SAV4HGSS { HasCustomSpecies: true } hg => species != 0 && hg.Personal.IsSpeciesInGame(species),
         // LGPE: national dex limited to original 151 + Meltan (808) + Melmetal (809).
         SAV7b => species is >= 1 and <= 151 or 808 or 809,
 
