@@ -1,4 +1,6 @@
 using Bunit;
+using Microsoft.Extensions.DependencyInjection;
+using MudBlazor;
 using Pkmds.Rcl.Components.Dialogs;
 using static System.Buffers.Binary.BinaryPrimitives;
 
@@ -62,7 +64,7 @@ public class ExpandedCampaignSupportTests
     }
 
     [Fact]
-    public void SaveInfoIdentifiesTheExpandedFormat()
+    public async Task SaveInfoIdentifiesTheExpandedFormat()
     {
         var save = SyntheticCampaignSave();
         var state = new TestAppState { SaveFile = save };
@@ -70,12 +72,18 @@ public class ExpandedCampaignSupportTests
         var service = new AppService(state, refresh, new LegalizationService(state));
         using var context = BunitTestHelpers.CreateBunitContext(state, refresh, service);
 
-        var rendered = context.Render<SaveFileInfoDialog>(
-            parameters => parameters.Add(component => component.SaveFile, save));
+        var provider = context.Render<MudDialogProvider>();
+        var dialogs = context.Services.GetRequiredService<IDialogService>();
+        var parameters = new DialogParameters { [nameof(SaveFileInfoDialog.SaveFile)] = save };
+        await provider.InvokeAsync(async () =>
+            await dialogs.ShowAsync<SaveFileInfoDialog>("Save File Info", parameters));
 
-        rendered.Markup.Should().Contain("Campaign Format");
-        rendered.Markup.Should().Contain("Expanded HGSS");
-        rendered.Markup.Should().Contain("matching game/editor forks required");
+        provider.WaitForAssertion(() =>
+        {
+            provider.Markup.Should().Contain("Campaign Format");
+            provider.Markup.Should().Contain("Expanded HGSS");
+            provider.Markup.Should().Contain("matching game/editor forks required");
+        });
     }
 
     [Fact]

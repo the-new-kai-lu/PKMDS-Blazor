@@ -76,6 +76,7 @@ jobs:
           skip_app_build: true
 
   deploy_functions:
+    if: github.repository == 'codemonkey85/PKMDS-Blazor'
     name: Deploy Azure Functions
     runs-on: ubuntu-latest
     # Least-privilege: deploys via the AZURE_CREDENTIALS secret, not GITHUB_TOKEN.
