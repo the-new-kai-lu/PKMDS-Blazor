@@ -33,6 +33,13 @@
                             <td><strong>Save Type</strong></td>
                             <td>@SaveFile.GetType().Name</td>
                         </tr>
+                        @if (SaveFile is SAV4HGSS { IsExpandedCampaign: true })
+                        {
+                            <tr>
+                                <td><strong>Campaign Format</strong></td>
+                                <td>Expanded HGSS — matching game/editor forks required</td>
+                            </tr>
+                        }
                         <tr>
                             <td><strong>Generation</strong></td>
                             <td>@SaveFile.Generation</td>

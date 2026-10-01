@@ -31,7 +31,14 @@ else
         @SaveFileNameDisplay.SaveFileNameDisplayString(AppState, AppService)
     </MudText>
 
-    @if (saveFile is SAV4HGSS { IsHGEngine: true })
+    @if (saveFile is SAV4HGSS { IsExpandedCampaign: true })
+    {
+        <MudAlert Severity="Severity.Info" Class="my-3">
+            Expanded HGSS campaign save: use the matching game and editor forks.
+            Retail legality checks do not describe this ROM's campaign encounters.
+        </MudAlert>
+    }
+    else if (saveFile is SAV4HGSS { IsHGEngine: true })
     {
         <MudAlert Severity="Severity.Info" Class="my-3">
             HG-engine save: custom species are supported. Retail legality checks do not describe this ROM's encounters.

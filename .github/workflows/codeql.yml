@@ -47,7 +47,7 @@ jobs:
       uses: actions/checkout@v7.0.1
       with:
         repository: the-new-kai-lu/PKHeX
-        ref: 94033cce0caf90dcc04bbacdbe991233bb3bef9f
+        ref: b7c732fd64d80f77ac947c5ec101b6ba3f2b9de0
         path: .dependencies/PKHeX
 
       # .NET SDK + WASM workload are only needed for the csharp manual build;
