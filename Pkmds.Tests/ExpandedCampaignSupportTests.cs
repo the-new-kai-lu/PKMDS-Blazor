@@ -70,7 +70,7 @@ public class ExpandedCampaignSupportTests
         var state = new TestAppState { SaveFile = save };
         var refresh = new TestRefreshService();
         var service = new AppService(state, refresh, new LegalizationService(state));
-        using var context = BunitTestHelpers.CreateBunitContext(state, refresh, service);
+        await using var context = BunitTestHelpers.CreateBunitContext(state, refresh, service);
 
         var provider = context.Render<MudDialogProvider>();
         var dialogs = context.Services.GetRequiredService<IDialogService>();
