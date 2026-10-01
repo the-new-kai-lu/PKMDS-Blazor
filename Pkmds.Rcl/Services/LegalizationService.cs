@@ -21,6 +21,12 @@ public sealed class LegalizationService(IAppState appState) : ILegalizationServi
         CancellationToken ct = default,
         int? timeoutSeconds = null)
     {
+        if (sav is SAV4HGSS { IsExpandedCampaign: true })
+        {
+            return new LegalizationOutcome(pk.Clone(), LegalizationStatus.Failed,
+                "Expanded HGSS uses custom campaign encounters. Retail legality generation is unavailable; edit this Pokémon directly.");
+        }
+
         if (sav is SAV4HGSS { IsHGEngine: true })
         {
             return new LegalizationOutcome(pk.Clone(), LegalizationStatus.Failed,
